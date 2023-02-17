@@ -1,0 +1,29 @@
+// .cards {
+.card-gruop {
+    flex-wrap: nowrap;
+}
+
+.cards {
+    margin-left: .3rem;
+}
+
+.cards-four {
+    margin-left: .3rem;
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-card{
+    background-color: lightgrey;
+}
+
+// MQ mobile
+@media (max-width: 748px) {
+    .card-gruop {
+        flex-wrap: wrap;
+    }
+}

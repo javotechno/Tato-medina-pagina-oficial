@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Tato Medina Tandil.grúas Tandil y pilares de luz ">
+    <meta name="keywords" content="pilares de luz Tandil, media tension tandil, grúas Tandil">
+    <meta name="author" content="Lis Medina">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- etiqueta link en href escribo el enlace relativo -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8fce408b6e.js" crossorigin="anonymous"></script>
+
+    <title>Trabajos Tato y José Medina </title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Logo -->
+                <a href="./index.html" class="navbar-brand" title="Tato Medina">
+                    <img loading="lazy" src="./images/logo.png" alt="Logo Tato Medina" /></a>
+
+                <!-- Menú mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links menú pcipal -->
+                <div class="navbar-collapse justify-content-end collapse" id="navbarToggler">
+                    <ul class="navbar-nav fs-6">
+                        <li class="nav-item">
+                            <a class="text-reset nav-link" href="./nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-reset nav-link active" href="./galeria.html">Galería</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-reset nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="text-reset nav-link dropdown-toggle" href="./servicios.html" id="menuDesplegable"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="menuDesplegable">
+                                <!-- Pasamos por parametro la categoria que queremos levantar los datos desde los jsons que se llaman como la categoría -->
+                                <li><a class="text-reset dropdown-item"
+                                        href="./servicios.html?categoria=electricos">Tendidos
+                                        eléctricos</a></li>
+                                <li><a class="text-reset dropdown-item" href="./servicios.html?categoria=grua">Servicios
+                                        de grúas</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-cart px-0 ps-lg-2" data-bs-toggle="modal"
+                                data-bs-target="#carrito">
+                                <i class="fa-solid fa-cart-shopping"></i> <span id="contadorCarrito"></span><span
+                                    class="d-lg-none"> Presupuesto</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TN5DBPQC8J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TN5DBPQC8J');
+</script>
+
+    <!-- Modal del carrito -->
+    <div class="modal right fade" id="carrito" tabindex="-1" role="dialog" aria-labelledby="carrito">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="carrito">Presupuesto</h4>
+                    <button type="button" class="btn btn-link btn-sm btn-clear" id="btn-clear"
+                        aria-label="Vaciar">Vaciar</button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="pedido">
+                        <!-- El Contenido del carrito se carga por JS -->
+                    </div>
+                    <div id="total">
+                        <!-- El Contenido se carga por JS -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btn-finalizar" class="closed btn btn-primary">Pedir
+                        presupuesto</button>
+                </div>
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <main>
+        <!-- Galeria -->
+        <section class="container pb-4">
+            <h1 class="fw-bold">Trabajos Tato Medina y José Medina S.R.L. Tandil</h1>
+            <!-- First row -->
+            <h2>Servicios de grúas Tandil</h2>
+            <div class="row g-4 mb-4">
+
+                <div class="col-sm-6 col-lg-3">
+                    <!-- cambio la etiqueta button por un a. Dentro del a pongo la img para que la img sea toda clickeable  -->
+
+                    <!-- Button trigger modal FOTO 1-->
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#modal-galeria"> <img
+                            src="./images/gallery/cinco.png" class="img-fluid galeria-hover" alt="grua"
+                            loading="lazy"></a>
+                    <!-- Modal foto 1-->
+                    <div class="modal fade" id="modal-galeria" tabindex="-1" aria-labelledby="modal-galeriaLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./images/gallery/cinco.png" class="img-fluid" alt="grua" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <!-- Button trigger modal foto2  -->
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#modal2-galeria"><img
+                            src="./images/gallery/trece.png" class="img-fluid galeria-hover" alt="grua"
+                            loading="lazy"></a>
+                    <!-- Modal foto2  -->
+                    <div class="modal fade" id="modal2-galeria" tabindex="-1" aria-labelledby="modal2-galeriaLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./images/gallery/trece.png" class="img-fluid" alt="grua" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <!-- Button trigger modal foto3 -->
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#modal3-galeria"><img
+                            src="./images/gallery/docee.png" class="img-fluid galeria-hover" alt="grua"
+                            loading="lazy"></a>
+                    <!-- Modal foto3 -->
+                    <div class="modal fade" id="modal3-galeria" tabindex="-1" aria-labelledby="modal3-galeriaLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./images/gallery/docee.png" class="img-fluid" alt="grua" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <!-- Button trigger modal foto 4-->
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#modal4-galeria"><img
+                            src="./images/gallery/tres.png" class="img-fluid galeria-hover" alt="grua"
+                            loading="lazy"></a>
+                    <!-- Modal foto 4-->
+                    <div class="modal fade" id="modal4-galeria" tabindex="-1" aria-labelledby="modal4-galeriaLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./images/gallery/tres.png" class="img-fluid" alt="grua" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second row -->
+
+            <h2>Tendidos eléctricos Tandil</h2>
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-3">
+                    <!-- Button trigger modal foto 5 -->
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#modal5-galeria"><img
+                            src="./images/gallery/siete.png" class="img-fluid galeria-hover" alt="grua"
+                            loading="lazy"></a>
+                    <!-- Modal foto 5  -->
+                    <div class="modal fade" id="modal5-galeria" tabindex="-1" aria-labelledby="modal5-galeriaLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./images/gallery/siete.png" class="img-fluid" alt="grua" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <!-- Boton trigler  -->
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#modal6-galeria"><img
+                            src="./images/gallery/diez.png" class="img-fluid galeria-hover" alt="grua"
+                            loading="lazy"></a>
+                    <!-- Modal foto 6 -->
+                    <div class="modal fade" id="modal6-galeria" tabindex="-1" aria-labelledby="modal5-galeriaLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./images/gallery/diez.png" class="img-fluid" alt="grua" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+
+                    <!-- Boton trigler foto 7 -->
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#modal7-galeria"><img
+                            src="./images/gallery/diesisiete.png" class="img-fluid galeria-hover" alt="grua"
+                            loading="lazy"></a>
+                    <!-- Modal trigler foto 7 -->
+                    <div class="modal fade" id="modal7-galeria" tabindex="-1" aria-labelledby="modal7-galeriaLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./images/gallery/diesisiete.png" class="img-fluid" alt="grua"
+                                        loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <!-- Boton trigler foto 8 -->
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#modal8-galeria"><img
+                            src="./images/gallery/diesiocho.png" class="img-fluid galeria-hover" alt="grua"
+                            loading="lazy"></a>
+                    <!-- Modal foto 8 -->
+                    <div class="modal fade" id="modal8-galeria" tabindex="-1" aria-labelledby="modal7-galeriaLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./images/gallery/diesiocho.png" class="img-fluid" alt="grua"
+                                        loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Noticias -->
+        <section class="container mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center my-4">Trabajos de Tato y José Medina S.R.L en las noticias...</h2>
+                </div>
+            </div>
+            <div class="row card-gruop p-0 m-0">
+                <div class="card col-12 col-md-3 mb-3 mb-md-0">
+                    <img src="./images/news/diariodetandil.png" class="card-img-top" alt="Nota del diario"
+                        loading="lazy">
+                    <div class="card-body cart-content border-top">
+                        <h6 class="card-title">Intensifican controles en puestos sanitarios</h6>
+                        <p class="card-text">La iniciativa es coordinada por la Secretaría de Protección Ciudadana de la
+                            comuna, y cuenta con el apoyo...</p>
+                        <a href="https://eldiariodetandil.com/2020/03/26/intensifican-los-controles-en-los-puestos-sanitarios?fbclid=IwAR3378xXEGBNZN1FY7Uv-cCspzRzQhXNLIUtI9wZeqi1R3-KhXnAWoaFZK4"
+                            target="_blank" class="btn btn-light border border-secondary btn-card mt-3 mt-md-0">Leer nota completa...</a>
+                    </div>
+                </div>
+
+                <div class="card col-12 col-md-3 cards mb-3 mb-md-0">
+                    <img src="./images/news/abc.png" class="card-img-top" alt="Nota del diario" loading="lazy">
+                    <div class="card-body cart-content border-top">
+                        <h6 class="card-title">Luz y vestuarios para el predio auxiliar de Ferro</h6>
+                        <p class="card-text">El Club Ferrocarril Sud avanza con las obras en el predio auxiliar Pedro
+                            “Coco” Sarasola. Además, informa que...</p>
+                        <a href="http://www.abchoy.com.ar/leerturismo.php?id=123727&t=luz_y_vestuarios_para_el_predio_auxiliar_ferro"
+                            class="btn btn-light border border-secondary btn-card mt-3 mt-md-0" target="_blank">Leer nota completa...</a>
+                    </div>
+                </div>
+
+                <div class="card col-12 col-md-3 cards mb-3 mb-md-0">
+                    <img src="./images/news/lavoz.png" class="card-img-top" alt="Nota del diario" loading="lazy">
+                    <div class="card-body cart-content border-top">
+                        <h6 class="card-title">En Ayacucho comenzaron los trabajos de ampliación en Mateo Hnos</h6>
+                        <p class="card-text">La Municipalidad de Ayacucho comunica que días atrás dieron inicio los
+                            primeros trabajos de nivelación del terreno...</p>
+                        <a href="https://www.lavozdetandil.com.ar/2020/01/27/en-ayacucho-comenzaron-los-trabajos-de-ampliacion-en-mateo-hnos"
+                            class="btn btn-light border border-secondary btn-card mt-3 mt-md-0" target="_blank">Leer nota completa...</a>
+                    </div>
+                </div>
+
+                <div class="card col-12 col-md-3 cards-four mb-3 mb-md-0">
+                    <img src="./images/news/baires.png" class="card-img-top" alt="Nota del diario" loading="lazy">
+                    <div class="card-body cart-content border-top">
+                        <h6 class="card-title">Reconstrucción de la historia de los cañones de Tandil</h6>
+                        <p class="card-text">Días atrás colocaron el cañón del Parque Independencia que había sido
+                            retirado a fines de 2021 para ser analizado...</p>
+                        <a href="https://bairescentromedios.com/2022/12/28/investigador-de-la-facso-al-frente-de-la-reconstruccion-de-la-historia-de-los-canones-de-tandil/"
+                            class="btn btn-light border border-secondary btn-card mt-3 mt-md-0" target="_blank">Leer nota completa...</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <div>
+        <a class="fixed-btn" target="_blank" href="https://web.whatsapp.com/send?phone=+549496102"><i
+                class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <footer>
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <ul class="list-unstyled mb-2">
+                        <li class="nav-item"><a class="nav-link fs-6 pb-3 pb-md-1" href="/index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link fs-6 pb-3 pb-md-1" href="./nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fs-6 pb-3 pb-md-1 active"
+                                href="./galeria.html">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link fs-6 pb-3 pb-md-1" href="./servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fs-6 pb-3" href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 contact">
+                    <ul class="list-unstyled">
+                        <li class="nav-item">
+                            <p class="fw-bold fs-6">Administración:</p>
+                            <a class="nav-link" href="tel:2494026594" title="Administración">
+                                <i class="fab fa-whatsapp"></i>
+                                <p class="fs-6 mb-3 mb-md-0">2494026594</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <p class="fw-bold fs-6">Servicios:</p>
+                            <a class="nav-link" href="tel:2494496102" title="Servicios">
+                                <i class="fab fa-whatsapp"></i>
+                                <p class="fs-6 mb-3 mb-md-0">2494496102</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://goo.gl/maps/EXswAuif3Q6bjLet6">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p class="fs-6">Rosalía de Castro 1272</p>
+                                <p class="fs-6 mb-3 mb-md-0">Tandil (7000), Buenos Aires, Arg.</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 mb-4 socials text-md-end text-center">
+                    <ul class="list-unstyled d-inline-flex">
+                        <li class="nav-item me-4">
+                            <a class="nav-link" target="_blank" href="https://www.facebook.com/tatoyjose.medina"
+                                title="Facebook">
+                                <i class="fab fa-facebook-square icono-footer"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" target="_blank" href="https://www.instagram.com/tatomedinaservicios"
+                                title="Instagram">
+                                <i class="fab fa-instagram icono-footer"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" target="_blank" href="mailto:tatomedinaservicioselectricos@hotmail.com"
+                                title="E-mail">
+                                <i class="fas fa-envelope icono-footer"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="copyrigth text-center px-3 py-1">
+        <p class="text-center mb-0">Copyright - 2023 © | Todos los derechos reservados. ato Medina y José Medina S.R.L.
+            Tandil | <a href="https://www.linkedin.com/in/lis-medina" target="_blank" class="text-decoration-none">Hecho
+                por Lis
+                Medina</a> y <a href="https://www.linkedin.com/in/javier-ignacio-rivarola-509a12235/" target="_blank"
+                class="text-decoration-none">Javier Rivarola</a> </p>
+    </div>
+    <!-- LInks scripts archivos js -->
+    <script src="./js/pedido.js" type="module"></script>
+    <!-- Links sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
